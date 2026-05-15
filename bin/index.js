@@ -20,8 +20,9 @@ async function run() {
     const agentChoice = await select({
       message: 'Qual agente de IA você utiliza para receber as skills?',
       choices: [
-        { name: 'Claude Code CLI', value: 'claude' },
-        { name: 'Antigravity IDE / Cursor', value: 'cursor' },
+        { name: 'Antigravity (pasta .agent)', value: 'antigravity' },
+        { name: 'Claude Code (pasta .claude)', value: 'claude' },
+        { name: 'Cursor (pasta .cursor)', value: 'cursor' },
         { name: 'Genérico (Apenas pasta .mdd)', value: 'generic' }
       ]
     });
@@ -30,17 +31,24 @@ async function run() {
     const cwd = process.cwd();
 
     // 3. Roteamento baseado na escolha
-    if (agentChoice === 'claude') {
+    if (agentChoice === 'antigravity') {
       const targetDir = path.join(cwd, '.agent/skills');
       fs.ensureDirSync(targetDir);
       fs.copySync(path.join(sourceDir, 'skills'), targetDir);
       console.log(chalk.green(`✔ Skills do MDD injetadas em: ${chalk.bold('.agent/skills/')}`));
       
+    } else if (agentChoice === 'claude') {
+      const targetDir = path.join(cwd, '.claude/skills');
+      fs.ensureDirSync(targetDir);
+      fs.copySync(path.join(sourceDir, 'skills'), targetDir);
+      console.log(chalk.green(`✔ Skills do MDD injetadas em: ${chalk.bold('.claude/skills/')}`));
+
     } else if (agentChoice === 'cursor') {
       const targetDir = path.join(cwd, '.cursor/rules');
       fs.ensureDirSync(targetDir);
       fs.copySync(path.join(sourceDir, 'rules'), targetDir);
       console.log(chalk.green(`✔ Regras do MDD injetadas em: ${chalk.bold('.cursor/rules/')}`));
+
     } else if (agentChoice === 'generic') {
       console.log(chalk.yellow(`ℹ Setup Genérico: Nenhuma regra extra será copiada, apenas a estrutura base.`));
     }
