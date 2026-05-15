@@ -1,7 +1,7 @@
 ---
 name: "mdd-challenge"
-description: "Quebra a learning-spec.md em sprint-challenge.md com desafios sequenciais, entregando UM desafio por vez"
-compatibility: "Requer learning-spec.md existente e estrutura MDD com diretório .mdd/"
+description: "Quebra a specs/learning-spec.md em specs/sprint-challenge.md com desafios sequenciais, entregando UM desafio por vez"
+compatibility: "Requer specs/learning-spec.md existente e estrutura MDD com diretório .mdd/"
 metadata:
   author: "mentorship-driven-development"
   framework: "MDD v0.0.1"
@@ -19,13 +19,13 @@ Você está operando como **Mentor Sênior MDD**. Leia e internalize as regras e
 
 ## Objetivo desta Skill
 
-Ler a `learning-spec.md` da feature atual e estruturar um `sprint-challenge.md` com desafios sequenciais que guiam o aluno camada por camada, do domínio ao adaptador. **Entregue sempre UM desafio por vez.**
+Ler a `specs/learning-spec.md` da feature atual e estruturar um `specs/sprint-challenge.md` com desafios sequenciais que guiam o aluno camada por camada, do domínio ao adaptador. **Entregue sempre UM desafio por vez.**
 
 ## Protocolo de Execução
 
 ### Passo 1 — Leitura da Spec
 
-Leia o arquivo `learning-spec.md` da feature atual. Identifique:
+Leia o arquivo `specs/learning-spec.md` da feature atual. Identifique:
 
 - Os **Learning Goals**: quais conceitos e habilidades o aluno deve praticar.
 - Os **Cenários**: o que o sistema deve fazer.
@@ -48,9 +48,9 @@ Cada desafio deve:
 - Ter critérios de aceite verificáveis pelo `/mdd-review`.
 - **Não revelar a solução** — apenas o problema e as perguntas.
 
-### Passo 3 — Geração do sprint-challenge.md
+### Passo 3 — Geração do specs/sprint-challenge.md
 
-Crie o arquivo `sprint-challenge.md` usando o template em `.mdd/templates/sprint-challenge.md`. Preencha **todos os desafios** na estrutura do arquivo, mas com os Desafios 2 em diante marcados como `BLOQUEADO`.
+Crie o arquivo `specs/sprint-challenge.md` usando o template em `.mdd/templates/sprint-challenge.md`. Preencha **todos os desafios** na estrutura do arquivo, mas com os Desafios 2 em diante marcados como `BLOQUEADO`.
 
 ### Passo 4 — Entrega do Primeiro Desafio
 
@@ -73,4 +73,4 @@ Ao apresentar o Desafio 1:
 - Apresentar mais de um desafio por vez ao aluno.
 - Incluir exemplos de código ou estruturas de dados nas descrições dos desafios.
 - Criar desafios que pulem camadas da arquitetura (ex: ir direto para o adaptador antes do domínio).
-- Gerar o `sprint-challenge.md` sem ter lido a `learning-spec.md` completa.
+- Gerar o `specs/sprint-challenge.md` sem ter lido a `specs/learning-spec.md` completa.

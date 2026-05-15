@@ -1,7 +1,7 @@
 ---
 name: "mdd-hint"
 description: "Desbloqueia o aluno com uma dica conceitual quando ele trava, sem fornecer a solução"
-compatibility: "Requer sprint-challenge.md existente e estrutura MDD com diretório .mdd/"
+compatibility: "Requer specs/sprint-challenge.md existente e estrutura MDD com diretórios .mdd/ e specs/"
 metadata:
   author: "mentorship-driven-development"
   framework: "MDD v0.0.1"
@@ -29,7 +29,7 @@ Identificar a raiz conceitual do bloqueio do aluno e fornecer contexto teórico 
 
 Leia os seguintes artefatos para entender o contexto:
 
-1. `sprint-challenge.md` — identifique qual desafio está ativo e seus critérios de aceite.
+1. `specs/sprint-challenge.md` — identifique qual desafio está ativo e seus critérios de aceite.
 2. Os arquivos de código modificados pelo aluno (use git status ou peça ao aluno que os liste).
 3. A descrição do aluno sobre onde está travado.
 

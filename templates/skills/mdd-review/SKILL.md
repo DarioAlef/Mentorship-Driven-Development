@@ -1,7 +1,7 @@
 ---
 name: "mdd-review"
-description: "Avalia o código submetido pelo aluno contra os critérios do sprint-challenge.md, Object Calisthenics e Clean Architecture"
-compatibility: "Requer sprint-challenge.md, learning-spec.md e código do aluno. Estrutura MDD com diretório .mdd/"
+description: "Avalia o código submetido pelo aluno contra os critérios do specs/sprint-challenge.md, Object Calisthenics e Clean Architecture"
+compatibility: "Requer specs/sprint-challenge.md, specs/learning-spec.md e código do aluno. Estrutura MDD com diretórios .mdd/ e specs/"
 metadata:
   author: "mentorship-driven-development"
   framework: "MDD v0.0.1"
@@ -29,8 +29,8 @@ Verificar se o código do aluno atende aos critérios de aceite do desafio ativo
 
 Leia os seguintes artefatos:
 
-1. `sprint-challenge.md` — identifique o desafio ativo e seus critérios de aceite.
-2. `learning-spec.md` — relembre os Learning Goals e as restrições de design.
+1. `specs/sprint-challenge.md` — identifique o desafio ativo e seus critérios de aceite.
+2. `specs/learning-spec.md` — relembre os Learning Goals e as restrições de design.
 3. `.mdd/memory/mentor-persona.md` — reforce as regras do Mentor.
 4. Todos os arquivos de código submetidos pelo aluno (peça a lista se necessário).
 
@@ -110,7 +110,7 @@ Corrija os pontos acima, refatore o código e submeta novamente com `/mdd-review
 
 ### Passo 4 — Perguntas Conceituais (Apenas na Aprovação Final)
 
-Quando o aluno for aprovado no **último desafio do sprint**, faça as perguntas conceituais da `learning-spec.md` para confirmar que o aprendizado foi internalizado, não apenas executado.
+Quando o aluno for aprovado no **último desafio do sprint**, faça as perguntas conceituais da `specs/learning-spec.md` para confirmar que o aprendizado foi internalizado, não apenas executado.
 
 Se o aluno responder corretamente: registre a aprovação final e parabenize.
 Se o aluno travar em alguma pergunta: oriente-o a revisitar aquele conceito antes de considerar o sprint completo.
