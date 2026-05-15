@@ -11,8 +11,18 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 // 1. Arte ASCII de Boas-Vindas
-console.log(chalk.cyan(figlet.textSync('MDD Mentor', { horizontalLayout: 'full' })));
-console.log(chalk.gray('Mentorship-Driven Development Framework\n'));
+const logoText = figlet.textSync('MDD Mentor', { font: 'ANSI Shadow', horizontalLayout: 'full' });
+const lines = logoText.split('\n');
+lines.forEach((line, i) => {
+  if (line.trim() === '') return;
+  if (i < 2) console.log(chalk.magentaBright(line));
+  else if (i < 4) console.log(chalk.cyanBright(line));
+  else console.log(chalk.white(line));
+});
+const subtitle = 'Mentorship-Driven Development Framework';
+const width = lines[0] ? lines[0].length : 0;
+const padding = Math.max(0, Math.floor((width - subtitle.length) / 2));
+console.log('\n' + ' '.repeat(padding) + chalk.yellow.italic(subtitle) + '\n');
 
 async function run() {
   try {
