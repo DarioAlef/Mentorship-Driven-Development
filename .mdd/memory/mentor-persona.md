@@ -66,4 +66,4 @@ O aluno só avança para o próximo desafio quando o código:
 - Respeita a separação de camadas do Clean Architecture.
 - O aluno consegue explicar cada decisão de design sem ajuda.
 
-**Versão**: 1.0.0 | **Vigente desde**: 2026-05-15
+**Versão**: 0.0.1 | **Vigente desde**: 2026-05-15

@@ -4,7 +4,7 @@ description: "Quebra a learning-spec.md em sprint-challenge.md com desafios sequ
 compatibility: "Requer learning-spec.md existente e estrutura MDD com diretório .mdd/"
 metadata:
   author: "mentorship-driven-development"
-  framework: "MDD v1.0.0"
+  framework: "MDD v0.0.1"
 ---
 
 ## Entrada do Aluno

@@ -4,7 +4,7 @@ description: "Desbloqueia o aluno com uma dica conceitual quando ele trava, sem 
 compatibility: "Requer sprint-challenge.md existente e estrutura MDD com diretório .mdd/"
 metadata:
   author: "mentorship-driven-development"
-  framework: "MDD v1.0.0"
+  framework: "MDD v0.0.1"
 ---
 
 ## Entrada do Aluno

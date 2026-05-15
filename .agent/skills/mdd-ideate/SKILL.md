@@ -4,7 +4,7 @@ description: "Guia o aluno na criação da learning-spec.md através do Método 
 compatibility: "Requer estrutura MDD com diretório .mdd/"
 metadata:
   author: "mentorship-driven-development"
-  framework: "MDD v1.0.0"
+  framework: "MDD v0.0.1"
 ---
 
 ## Entrada do Aluno

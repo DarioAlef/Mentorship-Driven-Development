@@ -6,5 +6,5 @@
   "integration": "claude",
   "preset": null,
   "script": "sh",
-  "mdd_version": "1.0.0"
+  "mdd_version": "0.0.1"
 }

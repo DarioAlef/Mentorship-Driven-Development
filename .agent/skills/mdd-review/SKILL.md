@@ -4,7 +4,7 @@ description: "Avalia o código submetido pelo aluno contra os critérios do spri
 compatibility: "Requer sprint-challenge.md, learning-spec.md e código do aluno. Estrutura MDD com diretório .mdd/"
 metadata:
   author: "mentorship-driven-development"
-  framework: "MDD v1.0.0"
+  framework: "MDD v0.0.1"
 ---
 
 ## Entrada do Aluno
