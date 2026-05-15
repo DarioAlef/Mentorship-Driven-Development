@@ -1,0 +1,36 @@
+{
+  "name": "@darioalef/mdd",
+  "version": "0.0.2",
+  "description": "Mentorship-Driven Development Framework",
+  "main": "bin/index.js",
+  "bin": {
+    "mdd": "bin/index.js"
+  },
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DarioAlef/Mentorship-Driven-Development.git"
+  },
+  "keywords": [
+    "mdd",
+    "mentorship",
+    "cli",
+    "ai",
+    "claude"
+  ],
+  "author": "Dario Alef",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/DarioAlef/Mentorship-Driven-Development/issues"
+  },
+  "homepage": "https://github.com/DarioAlef/Mentorship-Driven-Development#readme",
+  "dependencies": {
+    "chalk": "^5.6.2",
+    "figlet": "^1.11.0",
+    "fs-extra": "^11.3.5",
+    "inquirer": "^13.4.3"
+  }
+}
