@@ -1,6 +1,6 @@
 {
   "name": "@darioalef/mdd",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Mentorship-Driven Development Framework",
   "main": "bin/index.cjs",
   "bin": {
