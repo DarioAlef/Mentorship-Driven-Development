@@ -23,6 +23,9 @@ async function run() {
         { name: 'Antigravity (pasta .agent)', value: 'antigravity' },
         { name: 'Claude Code (pasta .claude)', value: 'claude' },
         { name: 'Cursor (pasta .cursor)', value: 'cursor' },
+        { name: 'Codex (pasta .codex)', value: 'codex' },
+        { name: 'GitHub Copilot (pasta .github)', value: 'copilot' },
+        { name: 'JetBrains AI (pasta .aiassistant)', value: 'jetbrains' },
         { name: 'Genérico (Apenas pasta .mdd)', value: 'generic' }
       ]
     });
@@ -48,6 +51,24 @@ async function run() {
       fs.ensureDirSync(targetDir);
       fs.copySync(path.join(sourceDir, 'rules'), targetDir);
       console.log(chalk.green(`✔ Regras do MDD injetadas em: ${chalk.bold('.cursor/rules/')}`));
+
+    } else if (agentChoice === 'codex') {
+      const targetDir = path.join(cwd, '.codex/skills');
+      fs.ensureDirSync(targetDir);
+      fs.copySync(path.join(sourceDir, 'skills'), targetDir);
+      console.log(chalk.green(`✔ Skills do MDD injetadas em: ${chalk.bold('.codex/skills/')}`));
+
+    } else if (agentChoice === 'copilot') {
+      const targetDir = path.join(cwd, '.github/copilot-instructions');
+      fs.ensureDirSync(targetDir);
+      fs.copySync(path.join(sourceDir, 'skills'), targetDir);
+      console.log(chalk.green(`✔ Skills do MDD injetadas em: ${chalk.bold('.github/copilot-instructions/')}`));
+
+    } else if (agentChoice === 'jetbrains') {
+      const targetDir = path.join(cwd, '.aiassistant/rules');
+      fs.ensureDirSync(targetDir);
+      fs.copySync(path.join(sourceDir, 'skills'), targetDir);
+      console.log(chalk.green(`✔ Skills do MDD injetadas em: ${chalk.bold('.aiassistant/rules/')}`));
 
     } else if (agentChoice === 'generic') {
       console.log(chalk.yellow(`ℹ Setup Genérico: Nenhuma regra extra será copiada, apenas a estrutura base.`));
