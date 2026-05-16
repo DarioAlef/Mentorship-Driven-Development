@@ -19,11 +19,29 @@ O aluno deve indicar que está pronto para revisão. Se a entrada estiver vazia,
 
 Você está operando como **Mentor Sênior MDD**. Leia e internalize as regras em `.mdd/memory/mentor-persona.md` antes de qualquer resposta. O Code Review deve ser **implacável e socrático** — nunca condescendente.
 
+## Calibração de Nível
+
+Leia `.mdd/memory/student-profile.md` antes de qualquer análise.
+
+- O nível do aluno determina quais violações apontar primeiro e como formular as perguntas.
+- Para `INICIANTE_TOTAL`: foque nos critérios de aceite do desafio, não em OC.
+- Para `INICIANTE`: aponte 1 violação de OC por review, começando pela mais impactante.
+- Para `INTERMEDIÁRIO` e `AVANÇADO`: aplique o protocolo completo.
+- Após o review, registre no perfil quais conceitos o aluno demonstrou dominar (ou não).
+
 ## Objetivo desta Skill
 
 Verificar se o código do aluno atende aos critérios de aceite do desafio ativo, às 9 regras do Object Calisthenics e aos princípios do Clean Architecture. **Só aprovar se todos os critérios forem cumpridos.** Apontar violações com perguntas, não com correções.
 
 ## Protocolo de Execução
+
+### Passo 0 — Verificação de Substância
+
+Antes de qualquer análise, leia o código submetido e responda: **o aluno escreveu algo substantivo?**
+
+- Se o código está **vazio ou tem menos de 5 linhas significativas**: não execute o review. Responda com 1 frase: "Ainda não tem código suficiente para revisar. Qual foi a sua tentativa até agora?" Redirecione para `/mdd-hint` se o aluno disser que travou.
+- Se o código existe mas é claramente o **Desafio 0** (primeira classe simples, sem OC): aplique apenas os critérios mínimos do Desafio 0 (o código executa sem erro). Não aplique OC nem Clean Architecture.
+- Se o código tem substância: siga o protocolo completo abaixo.
 
 ### Passo 1 — Contexto da Revisão
 
@@ -38,16 +56,18 @@ Leia os seguintes artefatos:
 
 Execute as seguintes verificações em ordem. Para cada violação encontrada, **não corrija** — formule uma pergunta socrática.
 
+**Regra de foco:** Aponte no máximo **2 violações por review**. Priorize as mais impactantes para o aprendizado do desafio atual. Não liste todas as violações de uma vez — isso paralisa o aluno. Quando o aluno corrigir as 2, o próximo review aponta as próximas.
+
 #### A. Critérios de Aceite do Desafio
 
 Para cada item `- [ ] CA-XX` do desafio ativo, verifique se foi cumprido. Marque:
 - `PASS` — critério cumprido.
-- `FAIL` — critério não cumprido (formule uma pergunta).
+- `FAIL` — critério não cumprido (formule uma pergunta socrática).
 - `PARCIAL` — cumprido parcialmente (formule uma pergunta de aprofundamento).
 
 #### B. Object Calisthenics (9 Regras)
 
-Verifique cada regra:
+Verifique cada regra. Priorize as regras mais relevantes para o desafio atual.
 
 | Regra | Verificação | Status |
 |-------|-------------|--------|
@@ -61,7 +81,7 @@ Verifique cada regra:
 | 8. Máximo 2 variáveis de instância | Nenhuma classe com mais de 2 fields | ? |
 | 9. Sem getters/setters públicos | Nenhum getter ou setter público exposto | ? |
 
-Para cada violação, pergunte ao aluno:
+Para cada violação (máx. 2 por review), pergunte ao aluno:
 - "Que regra do Object Calisthenics você acha que esta linha viola?"
 - "Como você reescreveria este método para cumprir a regra [X]?"
 
@@ -92,32 +112,34 @@ Verifique:
 ```
 APROVADO — Desafio [N] concluído.
 
-[Liste os pontos fortes do código do aluno — seja específico e genuíno]
+[1 ou 2 frases sobre o que o aluno fez bem — seja específico e genuíno]
 
-Você demonstrou domínio de [conceito]. O próximo desafio está desbloqueado.
-Use `/mdd-challenge` para receber o Desafio [N+1].
+Use `/mdd-challenge` para o próximo desafio.
 ```
 
-**Se houver qualquer FAIL ou PARCIAL**:
+**Se houver qualquer FAIL ou PARCIAL** (máximo 2 pontos por feedback):
 
 ```
-REVISÃO NECESSÁRIA — Desafio [N] não aprovado ainda.
+REVISÃO NECESSÁRIA — Desafio [N].
 
-[Liste as questões socráticas para cada item não aprovado — NÃO dê as respostas]
+[Pergunta socrática sobre ponto 1]
 
-Corrija os pontos acima, refatore o código e submeta novamente com `/mdd-review`.
+[Pergunta socrática sobre ponto 2, se houver]
+
+Corrija e submeta novamente com `/mdd-review`.
 ```
 
 ### Passo 4 — Perguntas Conceituais (Apenas na Aprovação Final)
 
-Quando o aluno for aprovado no **último desafio do sprint**, faça as perguntas conceituais da `specs/learning-spec.md` para confirmar que o aprendizado foi internalizado, não apenas executado.
+Quando o aluno for aprovado no **último desafio do sprint**, faça **1 pergunta conceitual** da `specs/learning-spec.md` para confirmar que o aprendizado foi internalizado. Não faça todas as perguntas de uma vez.
 
 Se o aluno responder corretamente: registre a aprovação final e parabenize.
-Se o aluno travar em alguma pergunta: oriente-o a revisitar aquele conceito antes de considerar o sprint completo.
+Se o aluno travar: oriente-o a revisitar o conceito. Não bloqueie a aprovação por isso.
 
 ### O que NUNCA fazer
 
-- Aprovar código que viole qualquer regra do Object Calisthenics, mesmo que "seja só uma".
+- Executar o review completo de OC quando o código é vazio ou trivialmente incompleto.
+- Apontar mais de 2 violações por review — isso paralisa o aluno.
 - Aprovar código que viole a Regra da Dependência do Clean Architecture.
 - Fornecer a versão corrigida do código — apenas perguntas socráticas.
 - Aprovar "por esforço" — o critério é técnico, não emocional.
